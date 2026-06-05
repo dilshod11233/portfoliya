@@ -1,119 +1,133 @@
-/* From Uiverse.io by ShaikhWahid99 */ 
+/* From Uiverse.io by ShaikhWahid99 */
 .liquid-loader {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 5px;
-  padding: 20px;
-  font-family: system-ui, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+    padding: 20px;
+    font-family: system-ui, sans-serif;
 }
 
 .loader-track {
-  position: relative;
-  width: 180px;
-  height: 32px;
-  background: linear-gradient(135deg, #2a2a2a, #1a1a1a);
-  border-radius: 16px;
-  overflow: hidden;
-  box-shadow:
-    inset 0 2px 4px rgba(0, 0, 0, 0.6),
-    0 1px 3px rgba(255, 255, 255, 0.1);
+    position: relative;
+    width: 180px;
+    height: 32px;
+    background: linear-gradient(135deg, #2a2a2a, #1a1a1a);
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow:
+        inset 0 2px 4px rgba(0, 0, 0, 0.6),
+        0 1px 3px rgba(255, 255, 255, 0.1);
 }
 
 .liquid-fill {
-  position: absolute;
-  top: 2px;
-  left: 2px;
-  height: calc(100% - 4px);
-  background: linear-gradient(90deg, #4f46e5, #7c3aed, #ec4899, #f59e0b);
-  border-radius: 14px;
-  animation:
-    fillProgress 4s ease-out infinite,
-    colorShift 3s linear infinite;
-  box-shadow:
-    0 0 12px rgba(124, 58, 237, 0.4),
-    inset 0 1px 2px rgba(255, 255, 255, 0.2);
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    height: calc(100% - 4px);
+    background: linear-gradient(90deg, #4f46e5, #7c3aed, #ec4899, #f59e0b);
+    border-radius: 14px;
+    animation:
+        fillProgress 4s ease-out infinite,
+        colorShift 3s linear infinite;
+    box-shadow:
+        0 0 12px rgba(124, 58, 237, 0.4),
+        inset 0 1px 2px rgba(255, 255, 255, 0.2);
 }
 
 .loading-text {
-  color: white;
-  font-size: 18px;
-  font-weight: 600;
-  letter-spacing: 1px;
-  animation: textGlow 1s ease-in-out infinite;
+    color: white;
+    font-size: 18px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    animation: textGlow 1s ease-in-out infinite;
 }
 
 .dot {
-  margin-left: 3px;
-  animation: blink 1.5s infinite;
+    margin-left: 3px;
+    animation: blink 1.5s infinite;
 }
+
 .dot:nth-of-type(1) {
-  animation-delay: 0s;
+    animation-delay: 0s;
 }
+
 .dot:nth-of-type(2) {
-  animation-delay: 0.3s;
+    animation-delay: 0.3s;
 }
+
 .dot:nth-of-type(3) {
-  animation-delay: 0.6s;
+    animation-delay: 0.6s;
 }
 
 @keyframes fillProgress {
-  0% {
-    width: 4px;
-  }
-  25% {
-    width: 25%;
-  }
-  50% {
-    width: 50%;
-  }
-  75% {
-    width: 75%;
-  }
-  100% {
-    width: calc(100% - 4px);
-  }
+    0% {
+        width: 4px;
+    }
+
+    25% {
+        width: 25%;
+    }
+
+    50% {
+        width: 50%;
+    }
+
+    75% {
+        width: 75%;
+    }
+
+    100% {
+        width: calc(100% - 4px);
+    }
 }
 
 @keyframes colorShift {
-  0% {
-    filter: hue-rotate(0deg) brightness(1);
-  }
-  33% {
-    filter: hue-rotate(120deg) brightness(1.1);
-  }
-  66% {
-    filter: hue-rotate(240deg) brightness(0.9);
-  }
-  100% {
-    filter: hue-rotate(360deg) brightness(1);
-  }
+    0% {
+        filter: hue-rotate(0deg) brightness(1);
+    }
+
+    33% {
+        filter: hue-rotate(120deg) brightness(1.1);
+    }
+
+    66% {
+        filter: hue-rotate(240deg) brightness(0.9);
+    }
+
+    100% {
+        filter: hue-rotate(360deg) brightness(1);
+    }
 }
 
 @keyframes textGlow {
-  0%,
-  100% {
-    opacity: 0.7;
-    text-shadow: 0 0 8px rgba(139, 92, 246, 0.3);
-  }
-  50% {
-    opacity: 1;
-    text-shadow: 0 0 16px rgba(139, 92, 246, 0.6);
-  }
+
+    0%,
+    100% {
+        opacity: 0.7;
+        text-shadow: 0 0 8px rgba(139, 92, 246, 0.3);
+    }
+
+    50% {
+        opacity: 1;
+        text-shadow: 0 0 16px rgba(139, 92, 246, 0.6);
+    }
 }
 
 @keyframes blink {
-  0%,
-  50% {
-    opacity: 1;
-  }
-  51%,
-  100% {
-    opacity: 0;
-  }
+
+    0%,
+    50% {
+        opacity: 1;
+    }
+
+    51%,
+    100% {
+        opacity: 0;
+    }
 }
 
-.load{
+.load {
     background-color: black;
     position: fixed;
     top: 0;
@@ -128,11 +142,15 @@
 }
 
 @keyframes ochir {
-    0%{
+    0% {
         opacity: 1;
-    }50%{
+    }
+
+    50% {
         opacity: 1;
-    }100%{
+    }
+
+    100% {
         opacity: 0;
         z-index: -1;
     }
@@ -146,7 +164,8 @@
     box-sizing: border-box;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
-.container{
+
+.container {
     max-width: 1200px;
     width: 100%;
     padding: 0 20px;
@@ -161,7 +180,7 @@ body {
     scroll-behavior: smooth;
 }
 
-nav {
+header {
     position: fixed;
     top: 0;
     left: 0;
@@ -175,7 +194,7 @@ nav {
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 
-nav a {
+header a {
     color: #00b3ff;
     text-decoration: none;
     margin: 0 15px;
@@ -184,7 +203,7 @@ nav a {
 }
 
 
-nav a:hover {
+header a:hover {
     color: #00b3ff;
     text-shadow: 1px 2px 20px #000000;
 }
@@ -225,7 +244,7 @@ h2 {
 }
 
 .header a:hover {
-    color: gold !important;
+    color: rgb(21, 255, 0) !important;
 }
 
 .item-img {
@@ -237,8 +256,9 @@ h2 {
     background: #1e293b;
 
 }
-.glass-card{
-    border: 3px solid rgb(3, 0, 86);
+
+.glass-card {
+    border: 3px solid rgb(0, 68, 255);
     border-radius: 30px;
     padding: 30px;
     padding-left: 60px;
@@ -247,9 +267,11 @@ h2 {
     justify-content: space-between;
     transition: all 0.2s linear;
 }
-.glass-card:hover{
-    border: 3px solid rgb(0, 255, 149);
+
+.glass-card:hover {
+    border: 1px solid rgb(0 ,255 ,174);
     margin-top: -20px;
+    box-shadow: 4px 4px 16px rgb(0, 255, 174);
 }
 
 .about-container {
@@ -263,7 +285,7 @@ h2 {
     width: 200px;
     height: 300px !;
     object-fit: cover;
-    border-radius: 30% 70% 70% 30% / 30% 30% 70% 70% ;
+    border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
     box-shadow: 0 0 30px rgba(192, 132, 252, 0.3);
     animation: morphing 10s infinite alternate;
 }
@@ -442,7 +464,11 @@ h2 {
     padding: 30px;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
-    border-radius: 20px;
+    border-radius: 10px;
+}
+.card{
+    max-width:400px !important;
+    width: 100%;
 }
 
 .myCard {
@@ -532,9 +558,7 @@ p {
     margin-top: 60px;
 }
 
-.card {
-    border-radius: 20px;
-}
+
 
 .cardss {
     display: flex;
@@ -544,11 +568,11 @@ p {
 }
 
 .card {
-    width: 190px;
+    max-width: 3000px;
+    width: 100%;
     height: 254px;
     background: linear-gradient(120deg, rgb(0, 0, 0), rgb(9, 0, 94), rgb(0, 0, 0));
     transition: all 0.5s;
-    border-radius: 10px;
     box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.705);
     font-size: 30px;
     font-weight: 900;
@@ -567,7 +591,7 @@ p {
 }
 
 .card:hover {
-    border-radius: 15px;
+    border-radius: 10px;
     cursor: pointer;
     transform: scale(1.2);
     box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.705);
