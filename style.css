@@ -1,158 +1,111 @@
-/* From Uiverse.io by ShaikhWahid99 */
-.liquid-loader {
+/* From Uiverse.io by Vosoone */
+.main-container {
     display: flex;
-    flex-direction: column;
+    justify-content: center;
     align-items: center;
-    gap: 5px;
-    padding: 20px;
-    font-family: system-ui, sans-serif;
+    height: 100%;
+    width: 100%;
 }
 
-.loader-track {
-    position: relative;
-    width: 180px;
-    height: 32px;
-    background: linear-gradient(135deg, #2a2a2a, #1a1a1a);
-    border-radius: 16px;
-    overflow: hidden;
-    box-shadow:
-        inset 0 2px 4px rgba(0, 0, 0, 0.6),
-        0 1px 3px rgba(255, 255, 255, 0.1);
+.loader {
+    width: 100%;
 }
 
-.liquid-fill {
-    position: absolute;
-    top: 2px;
-    left: 2px;
-    height: calc(100% - 4px);
-    background: linear-gradient(90deg, #4f46e5, #7c3aed, #ec4899, #f59e0b);
-    border-radius: 14px;
-    animation:
-        fillProgress 4s ease-out infinite,
-        colorShift 3s linear infinite;
-    box-shadow:
-        0 0 12px rgba(124, 58, 237, 0.4),
-        inset 0 1px 2px rgba(255, 255, 255, 0.2);
+.trace-bg {
+    stroke: #333;
+    stroke-width: 1.8;
+    fill: none;
 }
 
-.loading-text {
-    color: white;
-    font-size: 18px;
-    font-weight: 600;
+.trace-flow {
+    stroke-width: 1.8;
+    fill: none;
+    stroke-dasharray: 40 400;
+    stroke-dashoffset: 438;
+    filter: drop-shadow(0 0 6px currentColor);
+    animation: flow 3s cubic-bezier(0.5, 0, 0.9, 1) infinite;
+}
+
+.yellow {
+    stroke: #ffea00;
+    color: #ffea00;
+}
+
+.blue {
+    stroke: #1100ff;
+    color: #0004ff;
+}
+
+.green {
+    stroke: #00ff15;
+    color: #00ff15;
+}
+
+.purple {
+    stroke: #00ff62;
+    color: #00ff6a;
+}
+
+.red {
+    stroke: #ff3300;
+    color: #ff3300;
+}
+
+@keyframes flow {
+    to {
+        stroke-dashoffset: 0;
+    }
+}
+
+/* Čip */
+.chip-body {
+    rx: 20;
+    ry: 20;
+}
+
+/* Text uvnitř čipu */
+.chip-text {
+    font-weight: bold;
     letter-spacing: 1px;
-    animation: textGlow 1s ease-in-out infinite;
 }
 
-.dot {
-    margin-left: 3px;
-    animation: blink 1.5s infinite;
+/* Piny */
+.chip-pin {
+    stroke: #444;
+    stroke-width: 0.5;
+    filter: drop-shadow(0 0 2px rgba(0, 0, 0, 0.6));
 }
 
-.dot:nth-of-type(1) {
-    animation-delay: 0s;
-}
-
-.dot:nth-of-type(2) {
-    animation-delay: 0.3s;
-}
-
-.dot:nth-of-type(3) {
-    animation-delay: 0.6s;
-}
-
-@keyframes fillProgress {
-    0% {
-        width: 4px;
-    }
-
-    25% {
-        width: 25%;
-    }
-
-    50% {
-        width: 50%;
-    }
-
-    75% {
-        width: 75%;
-    }
-
-    100% {
-        width: calc(100% - 4px);
-    }
-}
-
-@keyframes colorShift {
-    0% {
-        filter: hue-rotate(0deg) brightness(1);
-    }
-
-    33% {
-        filter: hue-rotate(120deg) brightness(1.1);
-    }
-
-    66% {
-        filter: hue-rotate(240deg) brightness(0.9);
-    }
-
-    100% {
-        filter: hue-rotate(360deg) brightness(1);
-    }
-}
-
-@keyframes textGlow {
-
-    0%,
-    100% {
-        opacity: 0.7;
-        text-shadow: 0 0 8px rgba(139, 92, 246, 0.3);
-    }
-
-    50% {
-        opacity: 1;
-        text-shadow: 0 0 16px rgba(139, 92, 246, 0.6);
-    }
-}
-
-@keyframes blink {
-
-    0%,
-    50% {
-        opacity: 1;
-    }
-
-    51%,
-    100% {
-        opacity: 0;
-    }
-}
-
-.load {
-    background-color: black;
+.lading{
+    margin-top: 80px;
+    background-color: rgb(33, 33, 33);
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 100vh;
-    z-index: 10;
+    z-index: 11;
     display: flex;
     align-items: center;
     justify-content: center;
-    animation: ochir 5s forwards;
+    animation: ochir 4s forwards;
 }
 
 @keyframes ochir {
     0% {
         opacity: 1;
+
     }
 
     50% {
         opacity: 1;
+
     }
 
     100% {
         opacity: 0;
         z-index: -1;
+
     }
 }
 
@@ -269,7 +222,7 @@ h2 {
 }
 
 .glass-card:hover {
-    border: 1px solid rgb(0 ,255 ,174);
+    border: 1px solid rgb(0, 255, 174);
     margin-top: -20px;
     box-shadow: 4px 4px 16px rgb(0, 255, 174);
 }
@@ -466,8 +419,9 @@ h2 {
     grid-template-columns: 1fr 1fr 1fr 1fr;
     border-radius: 10px;
 }
-.card{
-    max-width:400px !important;
+
+.card {
+    max-width: 400px !important;
     width: 100%;
 }
 
